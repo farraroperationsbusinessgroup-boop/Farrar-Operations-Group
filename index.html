@@ -1,1 +1,130 @@
-<!DOCTYPE html>\n<html lang="en">\n<head>\n    <meta charset="UTF-8">\n    <meta name="viewport" content="width=device-width, initial-scale=1.0">\n    <title>Farrar Operations Group</title>\n    <style>\n        body {\n            font-family: Arial, sans-serif;\n            margin: 0;\n            padding: 0;\n            background-color: white;\n            color: #333;\n        }\n        header {\n            position: sticky;\n            top: 0;\n            background-color: white;\n            box-shadow: 0 2px 5px rgba(0,0,0,0.1);\n            z-index: 1000;\n        }\n        nav {\n            display: flex;\n            justify-content: space-between;\n            padding: 10px 20px;\n            background-color: #185FA5;\n            color: white;\n        }\n        nav a {\n            color: white;\n            text-decoration: none;\n            margin: 0 10px;\n        }\n        .cta {\n            background-color: #3B6D11;\n            color: white;\n            padding: 10px 15px;\n            border: none;\n            cursor: pointer;\n        }\n        .hero {\n            text-align: center;\n            padding: 50px 20px;\n            background-color: #f1f1f1;\n        }\n        .hero h1 {\n            font-size: 2.5em;\n            margin: 0;\n        }\n        .btn {\n            display: inline-block;\n            margin: 20px 5px;\n            padding: 15px 30px;\n            background-color: #185FA5;\n            color: white;\n            text-decoration: none;\n            border-radius: 5px;\n        }\n        .services, .pricing {\n            display: flex;\n            justify-content: space-around;\n            flex-wrap: wrap;\n            padding: 20px;\n        }\n        .card {\n            border: 1px solid #ccc;\n            border-radius: 10px;\n            padding: 20px;\n            margin: 10px;\n            flex: 1;\n            min-width: 280px;\n        }\n        .experience {\n            border: 2px solid #3B6D11;\n            padding: 20px;\n            margin: 20px;\n        }\n        .contact {\n            padding: 20px;\n        }\n        footer {\n            text-align: center;\n            padding: 10px;\n            background-color: #185FA5;\n            color: white;\n        }\n        @media (max-width: 600px) {\n            nav {\n                flex-direction: column;\n            }\n            .services, .pricing {\n                flex-direction: column;\n            }\n        }\n    </style>\n</head>\n<body>\n    <header>\n        <nav>\n            <div>Farrar Operations Group</div>\n            <div>\n                <a href="#hero">Home</a>\n                <a href="#services">Services</a>\n                <a href="#pricing">Pricing</a>\n                <a href="#about">About Us</a>\n                <a href="#experience">Experience</a>\n                <button class="cta">Book a Consultation</button>\n            </div>\n        </nav>\n    </header>\n    <section id="hero" class="hero">\n        <h1>Welcome to Farrar Operations Group</h1>\n        <a href="#services" class="btn">Our Services</a>\n        <a href="#contact" class="btn">Contact Us</a>\n    </section>\n    <section id="services">\n        <h2>Our Services</h2>\n        <div class="services">\n            <div class="card">\n                <h3>Service One</h3>\n                <p>Description of Service One.</p>\n            </div>\n            <div class="card">\n                <h3>Service Two</h3>\n                <p>Description of Service Two.</p>\n            </div>\n            <div class="card">\n                <h3>Service Three</h3>\n                <p>Description of Service Three.</p>\n            </div>\n        </div>\n    </section>\n    <section id="pricing">\n        <h2>Pricing</h2>\n        <div class="pricing">\n            <div class="card">\n                <h3>Basic Plan</h3>\n                <p>$99/month</p>\n            </div>\n            <div class="card">\n                <h3>Standard Plan</h3>\n                <p>$199/month</p>\n            </div>\n            <div class="card">\n                <h3>Premium Plan</h3>\n                <p>$299/month</p>\n            </div>\n        </div>\n    </section>\n    <section id="about">\n        <h2>About Us</h2>\n        <div>\n            <h3>Farrar Operations</h3>\n            <p>Professional Bio here.</p>\n            <p>Avatar initials: FOG</p>\n        </div>\n    </section>\n    <section class="experience" id="experience">\n        <h2>Experience</h2>\n        <p>University City Food Truck Park Project</p>\n    </section>\n    <section class="contact" id="contact">\n        <h2>Contact Us</h2>\n        <div>\n            <p>Email: info@farraroperationsgroup.com</p>\n            <p>Phone: (123) 456-7890</p>\n        </div>\n        <form>\n            <input type="text" placeholder="Your Name" required />\n            <input type="email" placeholder="Your Email" required />\n            <textarea placeholder="Your Message" required></textarea>\n            <button type="submit" class="cta">Request Consultation</button>\n        </form>\n    </section>\n    <footer>\n        <p>&copy; 2026 Farrar Operations Group. All rights reserved.</p>\n    </footer>\n    <script>\n        // Smooth scrolling for navigation links\n        document.querySelectorAll('nav a').forEach(anchor => {\n            anchor.addEventListener('click', function (e) {\n                e.preventDefault();\n                document.querySelector(this.getAttribute('href')).scrollIntoView({\n                    behavior: 'smooth'\n                });\n            });\n        });\n    </script>\n</body>\n</html>\n
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farrar Operations Group</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+        header {
+            position: sticky;
+            top: 0;
+            background: #185FA5;
+            padding: 10px;
+            text-align: center;
+        }
+        header nav a {
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .hero {
+            background: linear-gradient(to right, #185FA5, #3B6D11);
+            color: white;
+            padding: 50px 20px;
+            text-align: center;
+        }
+        .service-card {
+            border-top: 5px solid #3B6D11;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+        .highlighted {
+            border: 2px solid #3B6D11;
+            padding: 10px;
+        }
+        .about, .experience {
+            border: 2px solid #3B6D11;
+            padding: 20px;
+            margin: 20px;
+        }
+        .contact {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        .info {
+            flex: 1;
+            padding: 10px;
+        }
+        .form {
+            flex: 1;
+            padding: 10px;
+        }
+        @media (max-width: 768px) {
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+            .contact {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#services">Services</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <section class="hero">
+        <h1>Welcome to Farrar Operations Group</h1>
+        <p>Your partner in excellence</p>
+    </section>
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="service-card">Service 1</div>
+        <div class="service-card">Service 2</div>
+        <div class="service-card">Service 3</div>
+    </section>
+    <section id="pricing">
+        <h2>Pricing</h2>
+        <div class="pricing-grid">
+            <div class="highlighted">Most Popular Card</div>
+            <div>Standard Card</div>
+            <div>Basic Card</div>
+        </div>
+    </section>
+    <section id="about" class="about">
+        <h2>About Us</h2>
+        <p>Our vision and mission...</p>
+    </section>
+    <section id="experience" class="experience">
+        <h2>Experience</h2>
+        <p>Details about University City Food Truck Park project...</p>
+    </section>
+    <section id="contact" class="contact">
+        <div class="info">
+            <h2>Contact Information</h2>
+            <p>Phone: 123-456-7890</p>
+            <p>Email: info@example.com</p>
+        </div>
+        <div class="form">
+            <h2>Contact Form</h2>
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </section>
+</body>
+</html>
